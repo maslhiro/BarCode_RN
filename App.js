@@ -7,7 +7,7 @@ export default class App extends Component {
   {
     super(props)
     this.state = {
-      barcode : ""
+      barcode : null
     }
   }
 
@@ -28,8 +28,8 @@ export default class App extends Component {
             // alert(JSON.stringify(barcodes));
           }}
         />
-        <View style={{ flex: 0, flexDirection: 'row', justifyContent: 'center' , backgroundColor : 'white'}}>
-         <Text>{JSON.stringify(this.state.barcode)}</Text>
+        <View style={{ height: 80, backgroundColor : 'white'}}>
+         <Text style={{fontWeight:'bold',color:'black'}}> Raw Data : {JSON.stringify(this.state.barcode)}</Text>
         </View>
       </View>
     );
